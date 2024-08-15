@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/Inter-VariableFont_slnt_wght.woff2");
+}
+
 /* ------------------- CSS Reset ------------------- */
 * {
   margin: 0;
@@ -25,7 +30,13 @@ button {
   font: inherit;
 }
 
+/* ------------------- CSS Variables ------------------- */
+:root {
+  --ff-inter: "Inter", sans-serif;
+}
+/* ------------------- End of CSS Variables ------------------- */
+
 body {
-  font-family: sans-serif;
+  font-family: var(--ff-inter);
   background-color: grey;
 }
