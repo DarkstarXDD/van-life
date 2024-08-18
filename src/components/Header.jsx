@@ -1,16 +1,22 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 export default function Header() {
   return (
-    <header>
-      <Link to="/">#VANLIFE</Link>
+    <header className="header">
+      <Link to="/">
+        <img className="logo" src="/assets/images/logo.svg" alt="Vanlife" />
+      </Link>
       <nav>
-        <ul>
+        <ul className="header__navbar">
           <li>
-            <Link to="/about">About</Link>
+            <NavLink className="header__nav-element" to="/about">
+              About
+            </NavLink>
           </li>
           <li>
-            <Link to="/vans">Vans</Link>
+            <NavLink className="header__nav-element" to="/vans">
+              Vans
+            </NavLink>
           </li>
         </ul>
       </nav>

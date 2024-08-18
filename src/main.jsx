@@ -6,6 +6,8 @@ import "../styles.css"
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <div className="site-wrapper">
+      <App />
+    </div>
   </StrictMode>
 )

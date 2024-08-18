@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom"
-import Header from "../components/Header"
 
 export default function About() {
   return (
     <>
-      <Header />
       <main>
         <h1 className="about__heading">
           Don’t squeeze in a sedan when you could relax in a van.
