@@ -13,7 +13,7 @@
 }
 
 *:focus-visible {
-  outline: 0.125rem dotted var(--clr-primary-400);
+  outline: 0.125rem dotted var(--clr-primary-700);
   outline-offset: 0.125rem;
 }
 
@@ -34,7 +34,10 @@ button {
 :root {
   --ff-inter: "Inter", sans-serif;
 
+  --fs-300: 0.875rem;
   --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
   --fs-700: 2.25rem;
 
   --fw-regular: 400;
@@ -46,6 +49,7 @@ button {
   --clr-primary-300: hsl(33, 100%, 96%);
   --clr-primary-400: hsl(33, 100%, 91%);
   --clr-primary-500: hsl(34, 100%, 85%);
+  --clr-primary-600: hsl(33, 100%, 78%);
   /* --clr-primary-700: hsl(25, 100%, 61%); */
   --clr-primary-700: hsl(25, 100%, 34%);
 
@@ -106,12 +110,13 @@ body {
 }
 
 .main {
+  background-color: var(--clr-primary-300);
   padding: var(--pading);
 }
 
 .main--home {
   color: var(--clr-neutral-100);
-  background-image: url("/public/assets/images/home-img.webp");
+  background-image: url("/assets/images/home-img.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -143,7 +148,43 @@ body {
   margin-top: 3rem;
 }
 
+.main--about {
+  padding: 0;
+}
+
+.about__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: var(--pading);
+}
+
+.about__heading {
+  font-size: var(--fs-600);
+}
+
+.about__section {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+  background-color: var(--clr-primary-600);
+  border-radius: 8px;
+  padding: var(--pading);
+  margin-top: 1rem;
+}
+
+.about__button {
+  display: inline-block;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-medium);
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+}
+
 .footer {
+  font-size: var(--fs-300);
   text-align: center;
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
