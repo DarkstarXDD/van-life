@@ -9,12 +9,32 @@ export default function Header() {
       <nav>
         <ul className="header__navbar">
           <li>
-            <NavLink className="header__nav-element" to="/about">
+            <NavLink
+              to="/host"
+              className={({ isActive }) =>
+                isActive ? "header__nav-element--active" : "header__nav-element"
+              }
+            >
+              Host
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "header__nav-element--active" : "header__nav-element"
+              }
+            >
               About
             </NavLink>
           </li>
           <li>
-            <NavLink className="header__nav-element" to="/vans">
+            <NavLink
+              to="/vans"
+              className={({ isActive }) =>
+                isActive ? "header__nav-element--active" : "header__nav-element"
+              }
+            >
               Vans
             </NavLink>
           </li>

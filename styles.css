@@ -103,10 +103,11 @@ body {
   color: var(--clr-neutral-400);
 }
 
+.header__nav-element:hover,
 .header__nav-element--active {
-  color: var(--clr-neutral-900);
   font-weight: var(--fw-bold);
   text-decoration: underline;
+  color: var(--clr-neutral-900);
 }
 
 .main {
@@ -181,6 +182,22 @@ body {
   border-radius: 8px;
   padding: 1rem 1.5rem;
   margin-top: 1rem;
+}
+
+.main--host {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.5rem;
+  padding-top: 0;
+}
+
+.host__navbar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .footer {
