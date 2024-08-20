@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Inter";
-  src: url("assets/fonts/Inter-VariableFont_slnt_wght.woff2");
+  src: url("/assets/fonts/Inter-VariableFont_slnt_wght.woff2");
 }
 
 /* ------------------- CSS Reset ------------------- */
@@ -299,6 +299,76 @@ body {
 
 .vantile__type--bg-black {
   background-color: var(--clr-neutral-900);
+}
+
+/* ------------------- Van Details ------------------- */
+.main--van-details {
+  padding-top: 0;
+}
+
+.van-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.van-details__back-link {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  align-self: start;
+  gap: 0.5rem;
+  color: var(--clr-neutral-900);
+}
+
+@media (hover: hover) {
+  .van-details__back-link:hover {
+    color: var(--clr-neutral-400);
+  }
+}
+
+.van-details__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.75rem;
+}
+
+.van-details__name {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+}
+
+.van-details__price span {
+  font-size: var(--fs-450);
+  font-weight: var(--fw-bold);
+}
+
+.van-details__button {
+  width: 100%;
+  cursor: pointer;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-700);
+  border: none;
+  border: 2px solid var(--clr-primary-700);
+  border-radius: 4px;
+  padding: 0.75rem;
+  transition: all 100ms ease-out;
+}
+
+.van-details__button:active {
+  color: var(--clr-primary-700);
+  background-color: transparent;
+}
+
+@media (hover: hover) {
+  .van-details__button:hover {
+    color: var(--clr-primary-700);
+    background-color: transparent;
+  }
 }
 
 /* ------------------- Footer ------------------- */
