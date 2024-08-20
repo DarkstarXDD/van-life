@@ -30,9 +30,9 @@ export default function VanDetails() {
         </Link>
         <img src={van.imageUrl} alt="" className="vantile__img" />
         <div className="van-details__content-wrapper">
-          {/* <p className={`van__type vantile__type--bg-${color}`}>
-          {van.type.charAt(0).toUpperCase() + van.type.slice(1)}
-        </p> */}
+          <p className={`vantile__type vantile__type--bg-${color}`}>
+            {van.type && van.type.charAt(0).toUpperCase() + van.type.slice(1)}
+          </p>
           <h2 className="van-details__name">{van.name}</h2>
           <p className="van-details__price">
             <span>${van.price}</span>/day
