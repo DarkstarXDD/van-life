@@ -5,7 +5,8 @@ import HostLayout from "./layouts/HostLayout"
 
 import Home from "./pages/Home"
 import About from "./pages/About"
-import Vans from "./pages/Vans"
+import Vans from "./pages/Vans/Vans"
+import VanDetails from "./pages/Vans/VanDetails"
 
 import Dashboard from "./pages/Host/Dashboard"
 import Income from "./pages/Host/Income"
@@ -28,6 +29,7 @@ export default function App() {
           </Route>
           <Route path="about" element={<About />} />
           <Route path="vans" element={<Vans />} />
+          <Route path="vans/:id" element={<VanDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>

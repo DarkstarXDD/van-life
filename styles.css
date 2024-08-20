@@ -36,6 +36,7 @@ button {
 
   --fs-300: 0.875rem;
   --fs-400: 1rem;
+  --fs-450: 1.125rem;
   --fs-500: 1.25rem;
   --fs-600: 1.5rem;
   --fs-700: 2.25rem;
@@ -50,8 +51,9 @@ button {
   --clr-primary-400: hsl(33, 100%, 91%);
   --clr-primary-500: hsl(34, 100%, 85%);
   --clr-primary-600: hsl(33, 100%, 78%);
-  /* --clr-primary-700: hsl(25, 100%, 61%); */
+  --clr-primary-650: hsl(15, 70%, 60%);
   --clr-primary-700: hsl(25, 100%, 34%);
+  --clr-primary-800: hsl(176, 69%, 22%);
 
   --clr-neutral-100: hsl(0, 0%, 95%);
   --clr-neutral-400: hsl(0, 0%, 30%);
@@ -200,6 +202,106 @@ body {
   gap: 1.5rem;
 }
 
+/* ------------------- Vans ------------------- */
+.main--vans {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 0;
+}
+
+.vans__heading {
+  font-size: var(--fs-600);
+  text-align: center;
+}
+
+.vans__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ------------------- VanTile ------------------- */
+.vantile {
+  max-width: 20rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.6rem;
+  background-color: var(--clr-primary-600);
+  border-radius: 4px;
+  padding: 1rem;
+  transition: all 200ms ease-out;
+}
+
+.vantile:active {
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.45);
+}
+
+@media (hover: hover) {
+  .vantile:hover {
+    box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.45);
+  }
+}
+
+.vantile__img {
+  border-radius: 4px;
+}
+
+.vantile__name {
+  font-size: var(--fs-450);
+  font-weight: var(--fw-bold);
+}
+
+.vantile__link {
+  text-decoration: none;
+  color: var(--clr-neutral-900);
+}
+
+.vantile__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.vantile__name-price-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vantile__price span {
+  font-weight: var(--fw-bold);
+}
+
+.vantile__type {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-primary-400);
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+}
+
+.vantile__type--bg-orange {
+  background-color: var(--clr-primary-650);
+}
+
+.vantile__type--bg-green {
+  background-color: var(--clr-primary-800);
+}
+
+.vantile__type--bg-black {
+  background-color: var(--clr-neutral-900);
+}
+
+/* ------------------- Footer ------------------- */
 .footer {
   font-size: var(--fs-300);
   text-align: center;
