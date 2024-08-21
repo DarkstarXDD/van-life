@@ -225,6 +225,27 @@ body {
   gap: 2rem;
 }
 
+/* ------------------- VanType ------------------- */
+.vantype {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-primary-400);
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+}
+
+.vantype--bg-orange {
+  background-color: var(--clr-primary-650);
+}
+
+.vantype--bg-green {
+  background-color: var(--clr-primary-800);
+}
+
+.vantype--bg-black {
+  background-color: var(--clr-neutral-900);
+}
+
 /* ------------------- VanTile ------------------- */
 .vantile {
   max-width: 20rem;
@@ -279,26 +300,6 @@ body {
 
 .vantile__price span {
   font-weight: var(--fw-bold);
-}
-
-.vantile__type {
-  font-size: var(--fs-300);
-  font-weight: var(--fw-semibold);
-  color: var(--clr-primary-400);
-  border-radius: 4px;
-  padding: 0.4rem 0.8rem;
-}
-
-.vantile__type--bg-orange {
-  background-color: var(--clr-primary-650);
-}
-
-.vantile__type--bg-green {
-  background-color: var(--clr-primary-800);
-}
-
-.vantile__type--bg-black {
-  background-color: var(--clr-neutral-900);
 }
 
 /* ------------------- Van Details ------------------- */

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import { FaArrowLeftLong } from "react-icons/fa6"
 
+import VanType from "../../components/VanType"
+
 export default function VanDetails() {
   const params = useParams()
   const [van, setVan] = useState({})
@@ -12,15 +14,6 @@ export default function VanDetails() {
       .then((data) => setVan(data.van))
   }, [params.id])
 
-  let color = ""
-  if (van.type === "simple") {
-    color = "orange"
-  } else if (van.type === "luxury") {
-    color = "black"
-  } else {
-    color = "green"
-  }
-
   return (
     <main className="main main--van-details">
       <div className="van-details">
@@ -30,9 +23,7 @@ export default function VanDetails() {
         </Link>
         <img src={van.imageUrl} alt="" className="vantile__img" />
         <div className="van-details__content-wrapper">
-          <p className={`vantile__type vantile__type--bg-${color}`}>
-            {van.type && van.type.charAt(0).toUpperCase() + van.type.slice(1)}
-          </p>
+          <VanType type={van.type} />
           <h2 className="van-details__name">{van.name}</h2>
           <p className="van-details__price">
             <span>${van.price}</span>/day
