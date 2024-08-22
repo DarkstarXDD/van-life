@@ -1,11 +1,18 @@
 import { useState, useEffect } from "react"
-import { Link, useParams, Outlet, NavLink } from "react-router-dom"
+import { Link, useParams, Outlet } from "react-router-dom"
 import { FaArrowLeftLong } from "react-icons/fa6"
 
 import VanType from "../../components/VanType"
+import Navbar from "../../components/Navbar"
 
 export default function HostVanDetails() {
   const params = useParams()
+
+  const navLinks = [
+    { label: "Details", path: `/host/vans/${params.id}`, end: true },
+    { label: "Pricing", path: `/host/vans/${params.id}/pricing` },
+    { label: "Photos", path: `/host/vans/${params.id}/photos` },
+  ]
 
   const [hostVanDetails, setHostVanDetails] = useState({})
 
@@ -32,47 +39,7 @@ export default function HostVanDetails() {
           <h2 className="hostvandetails__name">{hostVanDetails.name}</h2>
           <p className="hostvandetails__price">${hostVanDetails.price}/day</p>
         </div>
-        <nav>
-          <ul className="hostvandetails__navbar">
-            <li>
-              <NavLink
-                to={`/host/vans/${params.id}`}
-                end
-                className={({ isActive }) =>
-                  isActive
-                    ? "header__nav-element--active"
-                    : "header__nav-element"
-                }
-              >
-                Details
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to={`/host/vans/${params.id}/pricing`}
-                className={({ isActive }) =>
-                  isActive
-                    ? "header__nav-element--active"
-                    : "header__nav-element"
-                }
-              >
-                Pricing
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to={`/host/vans/${params.id}/photos`}
-                className={({ isActive }) =>
-                  isActive
-                    ? "header__nav-element--active"
-                    : "header__nav-element"
-                }
-              >
-                Photos
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
+        <Navbar navLinks={navLinks} />
         <Outlet />
       </div>
     </div>
