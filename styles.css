@@ -219,6 +219,30 @@ body {
   gap: 2rem;
 }
 
+/* ------------------- Filter Button ------------------- */
+.filter-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-button {
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-primary-400);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+
+.filter-button-clear {
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 /* ------------------- VanType ------------------- */
 .vantype {
   font-size: var(--fs-300);
