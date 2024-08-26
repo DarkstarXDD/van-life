@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useSearchParams, Link } from "react-router-dom"
+import { useSearchParams } from "react-router-dom"
 import { FaCircleXmark } from "react-icons/fa6"
 
 import VanTile from "../../components/VanTile"
@@ -32,34 +32,48 @@ export default function Vans() {
     )
   })
 
+  function handleFilterChange(key, value) {
+    setSearchParams((prevSearchParams) => {
+      if (value === null) {
+        prevSearchParams.delete(key)
+      } else {
+        prevSearchParams.set(key, value)
+      }
+      return prevSearchParams
+    })
+  }
+
   return (
     <>
       <main className="main main--vans">
         <h1 className="vans__heading">Explore Our Van Options</h1>
         <div className="filter-buttons">
-          <Link
-            to="?type=simple"
-            className="filter-button filter-button-simple"
+          <button
+            onClick={() => handleFilterChange("type", "simple")}
+            className={`filter-button filter-button-simple ${selectedTypeFilter === "simple" ? "selected" : ""}`}
           >
             Simple
-          </Link>
-          <Link
-            to="?type=rugged"
-            className="filter-button filter-button-rugged"
+          </button>
+          <button
+            onClick={() => handleFilterChange("type", "rugged")}
+            className={`filter-button filter-button-rugged ${selectedTypeFilter === "rugged" ? "selected" : ""}`}
           >
             Rugged
-          </Link>
-          <Link
-            to="?type=luxury"
-            className="filter-button filter-button-luxury"
+          </button>
+          <button
+            onClick={() => handleFilterChange("type", "luxury")}
+            className={`filter-button filter-button-luxury ${selectedTypeFilter === "luxury" ? "selected" : ""}`}
           >
             Luxury
-          </Link>
+          </button>
           {selectedTypeFilter && (
-            <Link to="." className="filter-button filter-button-clear">
+            <button
+              onClick={() => handleFilterChange("type", null)}
+              className="filter-button filter-button-clear"
+            >
               <FaCircleXmark />
-              Clear filters
-            </Link>
+              Clear filter
+            </button>
           )}
         </div>
         <div className="vans__wrapper">{vanElements}</div>
