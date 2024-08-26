@@ -462,6 +462,40 @@ body {
   font-size: var(--fs-500);
 }
 
+/* ------------------- HostVanInfo ------------------- */
+.hostvaninfo__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+}
+
+.hostvaninfo__item {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+}
+
+.hostvaninfo__item > span {
+  font-weight: var(--fw-medium);
+}
+
+.hostvaninfo__pricing {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-medium);
+}
+
+.hostvaninfo__pricing > span {
+  font-size: var(--fs-300);
+  color: var(--clr-neutral-400);
+}
+
+.hostvaninfo__image {
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 4px;
+}
+
 /* ------------------- Footer ------------------- */
 .footer {
   font-size: var(--fs-300);

@@ -40,7 +40,7 @@ export default function HostVanDetails() {
           <p className="hostvandetails__price">${hostVanDetails.price}/day</p>
         </div>
         <Navbar navLinks={navLinks} />
-        <Outlet />
+        <Outlet context={hostVanDetails} />
       </div>
     </div>
   )
