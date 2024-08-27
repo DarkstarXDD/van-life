@@ -7,7 +7,7 @@ export default function VanTile({ imageUrl, name, price, type, id }) {
       <img src={imageUrl} alt="" className="vantile__img" />
       <div className="vantile__name-price-wrapper">
         <h3 className="vantile__name">
-          <Link to={`/vans/${id}`} className="vantile__link">
+          <Link to={`${id}`} className="vantile__link">
             {name}
           </Link>
         </h3>

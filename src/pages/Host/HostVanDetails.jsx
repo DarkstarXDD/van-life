@@ -9,9 +9,9 @@ export default function HostVanDetails() {
   const params = useParams()
 
   const navLinks = [
-    { label: "Details", path: `/host/vans/${params.id}`, end: true },
-    { label: "Pricing", path: `/host/vans/${params.id}/pricing` },
-    { label: "Photos", path: `/host/vans/${params.id}/photos` },
+    { label: "Details", path: `.`, end: true },
+    { label: "Pricing", path: `pricing` },
+    { label: "Photos", path: `photos` },
   ]
 
   const [hostVanDetails, setHostVanDetails] = useState({})

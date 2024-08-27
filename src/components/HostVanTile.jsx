@@ -5,7 +5,7 @@ export default function HostVanTile({ id, imageUrl, name, price }) {
     <div className="hostvantile">
       <img src={imageUrl} alt="" className="hostvantile__img" />
       <h2 className="hostvantile__name">
-        <Link to={`/host/vans/${id}`} className="hostvantile__link">
+        <Link to={`${id}`} className="hostvantile__link">
           {name}
         </Link>
       </h2>
