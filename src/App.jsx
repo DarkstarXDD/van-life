@@ -10,6 +10,7 @@ import VanDetails from "./pages/Vans/VanDetails"
 
 import Dashboard from "./pages/Host/Dashboard"
 import Income from "./pages/Host/Income"
+import Reviews from "./pages/Host/Reviews"
 
 import HostVans from "./pages/Host/HostVans"
 import HostVanDetails from "./pages/Host/HostVanDetails"
@@ -17,7 +18,7 @@ import HostVanInfo from "./pages/Host/HostVanInfo"
 import HostVanPricing from "./pages/Host/HostVanPricing"
 import HostVanPhotos from "./pages/Host/HostVanPhotos"
 
-import Reviews from "./pages/Host/Reviews"
+import NotFound from "./pages/NotFound"
 
 import "../server"
 
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="about" element={<About />} />
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetails />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
